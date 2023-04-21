@@ -115,6 +115,7 @@ install_XrayR() {
     go mod tidy
     export GOPROXY=https://goproxy.io,direct  &&  go build -o XrayR -ldflags "-s -w"
     cp * /usr/local/XrayR/
+    cd /usr/local/XrayR/
     wget -q -N --no-check-certificate -O /etc/XrayR/config.yml https://raw.githubusercontent.com/mortada-jafar/Xray-core/main/config.yml
     chmod +x XrayR
     mkdir /etc/XrayR/ -p
