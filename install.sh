@@ -110,7 +110,7 @@ install_XrayR() {
 
     mkdir /usr/local/XrayR/ -p
 	cd /tmp
-    git clone -b  reality https://github.com/XrayR-project/XrayR
+    git clone -b  reality https://github.com/mortada-jafar/XrayR
     cd XrayR/main
     go mod tidy
     export GOPROXY=https://goproxy.io,direct  &&  go build -o XrayR -ldflags "-s -w"
